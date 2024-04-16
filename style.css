@@ -9,6 +9,8 @@
 body {
   background-color: #faa2a5;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   /* overflow-x: hidden;  */
 }
 header {
@@ -49,7 +51,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   flex-direction: column;
 }
 .text {
@@ -104,6 +106,39 @@ header img {
   font-size: 1rem;
   color: #fffacd;
 }
+.about {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in 1s ease-out forwards;
+  animation-delay: 1s; /* Adjust the delay as needed */
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.content{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide 1s ease-in forwards;
+  animation-delay: 1s; /* Adjust the delay as needed */
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Clients section */
 .clients {
   position: relative;
   display: flex;
@@ -136,7 +171,11 @@ header img {
   height: 100%;
   margin: 2vw;
 }
-
+.clients img:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+.clinets-im
 /* Projects Section */
 .projects {
   position: relative;
