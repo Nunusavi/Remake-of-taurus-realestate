@@ -57,6 +57,7 @@ header img {
 }
 .text h1 {
   font-size: 5rem;
+  font-weight: 700;
   color: #fff;
   text-align: center;
 }
@@ -79,6 +80,8 @@ header img {
   left: 0;
   width: 100%;
 }
+
+/* About us section */
 .aboutus {
   background-color: #95485d;
   position: relative;
@@ -109,7 +112,7 @@ header img {
   height: 100vh;
   gap: 30px;
   padding: 100px 100px 100px 100px;
-  background-color: #a66c7c;
+  background-color: #ffcc99;
 }
 .clients .about-client {
   display: flex;
@@ -119,13 +122,297 @@ header img {
   width: 80%;
   gap: 20px;
 }
+.about-client h1{
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+}
+.about-client p {
+  font-size: 1rem;
+  color: #000000;
+}
 .clients img {
   width: 200px;
   height: 100%;
   margin: 2vw;
 }
+
+/* Projects Section */
 .projects {
   position: relative;
   background: white;
 }
+.gridywrap div[class*=gridy] {
+  background: #eee;
+  box-shadow: inset 0 0 0 1px #ddd;
+  padding: 15px; float: left;
+  position: relative;
+}
+.gridywrap .gridy-1,
+.gridywrap .gridy-2,
+.gridywrap .gridy-3 {width: 320px;
+  overflow: hidden;}
 
+.gridywrap .gridy-1 {width: 100%;}
+.gridywrap .gridy-2 {width: 100%;}
+.gridywrap .gridy-3 {width: 100%;}
+
+.gridywrap .gridyhe-1 {height: 320px;}
+.gridywrap .gridyhe-2 {height: 320px;}
+
+
+@media screen and (min-width: 640px) {
+  .gridywrap .gridyhe-2 {height: 320px;}
+  .gridywrap {
+    width: 100%;
+  }
+  .gridywrap .gridy-1 {width: 50%;}
+  .gridywrap .gridy-2 {width: 50%;}
+  .gridywrap .gridy-3 {width: 100%;}
+}
+@media screen and (min-width: 1024px) {
+  .gridywrap .gridy-1 {width: 33.3%;}
+  .gridywrap .gridy-2 {width: 66.6%;}
+  .gridywrap .gridy-3 {width: 100%;}
+  .gridywrap .gridyhe-2 {height: 640px;}
+}
+
+/*styling*/
+.gridywrap .gridimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+}
+.gridywrap .gridimg img {
+  width: 100%;
+}
+.gridywrap .gridinfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+  transition: all 0.8s;
+}
+.gridywrap .gridinfo h3 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 130px 0 20px;
+  position: relative;
+}
+.gridywrap .gridinfo h3:after {
+  content: '';
+  width: 25px;
+  border-top: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.gridywrap .gridinfo .gridmeta {
+  transition-delay: 0.25s;
+}
+.gridywrap .gridinfo .gridmeta p {
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.gridywrap .gridinfo .gridmeta p i {
+  margin-right: 5px;
+}
+.gridywrap .gridinfo .gridmeta p.gridwho {
+  margin-left: 25px;
+}
+.gridywrap .gridinfo p.gridexerpt {
+  width: 60%;
+  margin: 0 auto;
+  line-height: 22px;
+  margin-bottom: 25px;
+  color: #fff;
+  transition-delay: 0.5s;
+}
+
+.gridywrap .gridinfo * {
+  opacity: 0;
+  transition: all 0.8s;
+}
+.gridywrap .gridinfo h3 {
+  opacity: 1;
+}
+.gridywrap .gridinfo .grid-btn {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 25px;
+  border: 1px solid #fff; 
+  display: block;
+  overflow: hidden;
+}
+.gridywrap .gridinfo .grid-btn:hover {
+  width: 75px;
+  background: rgba(0,0,0,0.3);
+}
+.gridywrap .gridinfo .grid-btn span {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.8s;
+}
+.gridywrap .gridinfo .grid-btn:hover span {
+  opacity: 1;
+  display: inline;
+}
+.gridywrap .gridinfo .grid-btn:hover i {
+  opacity: 0;
+  display: none;
+}
+
+.gridywrap .gridinfo:hover * {
+  opacity: 0.7;
+}
+.gridywrap .gridinfo:hover p {
+  opacity: 1;
+}
+.gridywrap .gridinfo:hover {
+  background: rgba(158, 12, 73, 0.7);
+}
+.gridywrap .gridinfo:hover h3 {
+  margin-top: 70px;
+  opacity: 1;
+}
+
+.intro {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: #ddd;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  padding: 15px 0;
+}
+.intro p {
+  opacity: 0.5;
+  font-size: 12px;
+}
+.intro p a {
+  color: #FA8CD3;
+}
+
+
+/* Service */
+.service{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 6\5vw;
+  background-color: #ff3d43;
+  padding: 100px 100px 100px 100px;
+}
+.service-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.service-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  row-gap: 50px;
+}
+.service-content h1{
+  font-size: 4rem;
+  color: #fff;
+  font-weight: bold;
+}
+.service-content p{
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+.service-item-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+}
+.service-item-list h2{
+  font-size: 1.4.7rem;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.service-item-list p{
+  font-size: 1rem;
+  color: #f0f0f0;
+  text-align: center;
+}
+.service-item-list i{
+  color: white;
+  font-size: 2.5rem;
+}
+/* footer */
+.footer {
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  gap: 10px;
+  padding: 30px 10px 10px 10px;
+  background-color: #909090;
+}
+.footer-content-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: fl;
+  align-items: start;
+  gap: 10px;
+  padding-right: 100px;
+}
+.footer-content-item h2{
+  font-size: 1.5rem;
+  color: #e1e1e1;
+}
+.footet-content-item form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-content-item a{
+  color: #f5f5f5;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.footer-content-item a:hover{
+  color: #ee2d2d;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
