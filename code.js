@@ -59,4 +59,64 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// links to section is clicked, scroll to that section smoothly
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Select the element to animate
+const element = document.querySelector('.content');
+const aboutUs = document.querySelector('.about');
+const clientImg = document.querySelector('.client-img');
+const clinetText = document.querySelector('.about-client');
+const serviceContent = document.querySelector('.service-content');
+const serviceItem = document.querySelector('.service-item');
+
+// Create a new Intersection Observer instance
+const backward = new IntersectionObserver((entries, observer) => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is in the viewport
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('content-animation-forward');
+      // Stop observing the element
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+const forward = new IntersectionObserver((entries, observer) => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is in the viewport
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('content-animation-backward');
+        // Stop observing the element
+        observer.unobserve(entry.target);
+      }
+    })
+});
+
+backward.observe(element);
+forward.observe(aboutUs);
+forward.observe(clientImg);
+backward.observe(clinetText);
+forward.observe(serviceContent);
+backward.observe(serviceItem);
+
+
+// Contact form validation
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
