@@ -586,7 +586,7 @@ h1 {
     color: #ffffff;
     font-weight: 800;
     text-align: center;
-    z-index: 1000;
+    z-index: 1;
   }
   .mobile-content p{
     font-size: 1rem;
