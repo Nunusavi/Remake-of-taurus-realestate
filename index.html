@@ -264,19 +264,45 @@
             <div class="contact-info">
                 <h2>Contact us</h2>
                 <p><i class="fa fa-map-marker"></i> Addis Ababa, Ethiopia</p>
-                <p><i class="fa fa-phone"></i> +251-999-999,  +251-999-999</p>
+                <p><i class="fa fa-phone"></i> +251-999-999, +251-999-999</p>
                 <p><i class="fa fa-envelope"></i> taurusrealestat@gmail.com</p>
             </div>
             <div class="contact-form">
                 <form>
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Subject" />
-                    <textarea placeholder="Message"></textarea>
-                    <button>Send</button>
+                <section class="input-group">
+                        <input type="text" placeholder="" required />
+                        <label>Name</label>
+                    </section>
+                    <section class="input-group">
+                        <input type="email" placeholder="" required />
+                        <label>Email</label>
+                    </section>
+                    <section class="input-group">
+                        <input type="text" placeholder="" required />
+                        <label>Subject</label>
+                    </section>
+                    <section class="input-group">
+                        <textarea placeholder="" required></textarea>
+                        <label>Message</label>
+                    </section>
+                    <button type="submit">Send</button>
                 </form>
             </div>
             <div class="map-container">
-                <div style="overflow:hidden;max-width:100%;width:300px;height:300px;"><div id="embed-ded-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=meskel+square&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="code-for-google-map" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-ded-map-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+                <div style="overflow:hidden;max-width:100%;width:500px;height:300px; border-radius:10px;">
+                    <div id="embed-ded-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe
+                            style="height:100%;width:100%;border:0;" frameborder="0"
+                            src="https://www.google.com/maps/embed/v1/place?q=meskel+square&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    </div><a class="code-for-google-map" href="https://www.bootstrapskins.com/themes"
+                        id="authmaps-data">premium bootstrap themes</a>
+                    <style>
+                        #embed-ded-map-canvas img {
+                            max-height: none;
+                            max-width: none !important;
+                            background: none !important;
+                        }
+                    </style>
+                </div>
             </div>
         </section>
     </section>

@@ -120,3 +120,31 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.target.elements.email.value = '';
     e.target.elements.message.value = '';
   });
+
+// Input label animation
+const inputs = document.querySelectorAll('.input-group input, .input-group textarea');
+
+inputs.forEach(input => {
+  input.addEventListener('focus', handleFocus);
+  input.addEventListener('blur', handleBlur);
+});
+
+function handleFocus(event) {
+  const input = event.target;
+  const label = input.nextElementSibling;
+  label.style.top = '-10px';
+  label.style.left = '0';
+  label.style.color = '#ff3d43';
+  label.style.fontSize = '12px';
+}
+
+function handleBlur(event) {
+  const input = event.target;
+  const label = input.nextElementSibling;
+  if (input.value === '') {
+    label.style.top = '15px';
+    label.style.left = '15px';
+    label.style.color = '#fff';
+    label.style.fontSize = '16px';
+  }
+}
