@@ -34,6 +34,9 @@ const maxScrollPosition = documentHeight - viewportHeight;
 window.addEventListener('scroll', function () {
     let y = window.scrollY;
     let x = window.scrollX;
+    if (window.innerWidth < 768) {
+        return;
+    }
 
     // Calculate the scroll position as a percentage of the maximum scroll position
     const scrollPercentage = Math.min(y / maxScrollPosition, 1);
@@ -148,3 +151,21 @@ function handleBlur(event) {
     label.style.fontSize = '16px';
   }
 }
+
+// Mobile menu
+function openNav(){
+    document.getElementById('mySidepanel').style.width = '100%';
+}
+function closeNav(){
+    document.getElementById('mySidepanel').style.width = '0';
+}
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('mySidepanel').style.width = '0';
+    });
+});
+window.addEventListener('click', function(e) {
+    if (!document.getElementById('mySidepanel').contains(e.target) && !document.querySelector('.openbtn').contains(e.target)) {
+        document.getElementById('mySidepanel').style.width = '0';
+    }
+});
